@@ -1,0 +1,13 @@
+#shipmentsTable table, #fleetTable table, #invTable table{
+  width:100%; border-collapse:collapse; font-size:14px;
+}
+#shipmentsTable th, #shipmentsTable td,
+#fleetTable th, #fleetTable td,
+#invTable th, #invTable td{
+  padding:10px; border-bottom:1px solid #24314d; text-align:left;
+}
+.badge{display:inline-block;padding:4px 8px;border-radius:999px;font-size:12px}
+.badge.pending{background:#2c3e50;color:#d0e6ff}
+.badge.transit{background:#3b82f6;color:#fff}
+.badge.ready{background:#16a34a;color:#fff}
+.badge.delivered{background:#6ee7b7;color:#063}

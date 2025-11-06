@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SB Express — Customer Portal</title>
+  <link rel="stylesheet" href="assets/css/base.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">SB Express</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#create">Create Shipment</a>
+      <a href="#result">Result</a>
+      <a href="#tracking">Tracking</a>
+      <a href="admin.html" class="admin-link">Admin Panel →</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <h1>Fast & Fresh Logistics by Sea</h1>
+      <p>Cold-chain, container optimization and real-time tracking.</p>
+      <a href="#create" class="btn">Create Shipment</a>
+    </div>
+  </section>
+
+  <!-- Create Shipment -->
+  <section id="create" class="section">
+  <h2>Create Shipment</h2>
+  <form id="shipmentForm" class="card form-grid">
+    <div class="full">
+      <label>Origin</label>
+      <input value="Muğla, Türkiye" disabled />
+      <small class="muted">Şirket merkezi — tüm gönderiler Muğla’dan çıkacaktır.</small>
+    </div>
+
+    <div>
+      <label>Product Name</label>
+      <input name="product" placeholder="Fresh Blueberries" required />
+    </div>
+    <div>
+      <label>Category</label>
+      <select name="category" required>
+        <option value="Fresh">Fresh</option>
+        <option value="Frozen">Frozen</option>
+        <option value="Organic">Organic</option>
+      </select>
+    </div>
+    <div>
+      <label>Weight (kg)</label>
+      <input name="weight" type="number" min="1" step="1" required />
+    </div>
+    <div>
+      <label>Container Type</label>
+      <select name="container" required>
+        <option value="Small">Small</option>
+        <option value="Medium">Medium</option>
+        <option value="Large">Large</option>
+      </select>
+    </div>
+    <div>
+
+
+   <div>
+  <label>Destination Country</label>
+  <select name="country" id="countrySelect" required>
+    <option value="">Select Country</option>
+    <option value="Germany">Germany</option>
+    <option value="France">France</option>
+    <option value="Italy">Italy</option>
+    <option value="Spain">Spain</option>
+    <option value="Austria">Austria</option>
+    <option value="Greece">Greece</option>
+    <option value="Bulgaria">Bulgaria</option>
+    <option value="Romania">Romania</option>
+    <option value="Czech Republic">Czech Republic</option>
+    <option value="Hungary">Hungary</option>
+    <option value="Serbia">Serbia</option>
+    <option value="Netherlands">Netherlands</option>
+    <option value="Switzerland">Switzerland</option>
+  </select>
+   </div>
+
+    <div class="full">
+      <label>Product Image</label>
+      <input name="image" type="file" accept="image/*" />
+    </div>
+    <div class="full">
+      <button class="btn" type="submit">Calculate & Create</button>
+    </div>
+  </form>
+  </section>
+
+
+
+  <!-- Result -->
+  <section id="result" class="section">
+    <h2>Result</h2>
+    <div id="resultCard" class="card muted">No shipment yet. Create one above.</div>
+  </section>
+
+  <!-- Tracking -->
+  <section id="tracking" class="section">
+    <h2>Tracking</h2>
+    <div class="card form-inline">
+      <input id="trackId" placeholder="Enter Order ID" />
+      <button id="trackBtn" class="btn">Check Status</button>
+    </div>
+    <div id="trackCard" class="card muted">Waiting for Order ID…</div>
+  </section>
+
+  <footer class="footer">© SB Express · 2025</footer>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/utils.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

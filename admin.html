@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SB Express — Admin</title>
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/admin.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">SB Express · Admin</div>
+    <nav>
+      <a href="index.html">← Customer</a>
+    </nav>
+  </header>
+
+  <main class="section">
+    <div class="tabs">
+      <button class="tab active" data-tab="shipments">Shipments 📦</button>
+      <button class="tab" data-tab="opt">Container Optimization 🚚</button>
+      <button class="tab" data-tab="fleet">Fleet 🚢</button>
+      <button class="tab" data-tab="financials">Financials 💰</button>
+      <button class="tab" data-tab="inventory">Inventory 🫐</button>
+      <button class="tab" data-tab="reports">Reports 📈</button>
+    </div>
+
+    <section id="shipments" class="tab-panel active">
+       <h2>Shipments</h2>
+       <div class="form-inline" style="margin:8px 0;">
+         <button id="reloadBtn" class="btn">↻ Reload Data</button>
+         <span class="muted" id="lastSync" style="margin-left:8px;">Last sync: —</span>
+      </div>
+      <div id="shipmentsTable" class="card table">Loading…</div>
+    </section>
+
+
+    <section id="opt" class="tab-panel">
+      <h2>Container Optimization</h2>
+      <div class="card">
+        <p>First-Fit Decreasing placeholder.</p>
+        <button id="optimizeBtn" class="btn">Optimize</button>
+        <div id="optimizeResult" class="muted" style="margin-top:8px;">Waiting…</div>
+      </div>
+    </section>
+
+    <section id="fleet" class="tab-panel">
+      <h2>Fleet</h2>
+      <div id="fleetTable" class="card table">Loading…</div>
+    </section>
+
+    <section id="financials" class="tab-panel">
+      <h2>Financials</h2>
+      <div id="finCards" class="grid-3">
+        <div class="card"><h3>Revenue</h3><div id="revVal">—</div></div>
+        <div class="card"><h3>Expenses</h3><div id="expVal">—</div></div>
+        <div class="card"><h3>Tax (20%)</h3><div id="taxVal">—</div></div>
+      </div>
+    </section>
+
+    <section id="inventory" class="tab-panel">
+      <h2>Inventory</h2>
+      <div id="invTable" class="card table">Loading…</div>
+    </section>
+
+    <section id="reports" class="tab-panel">
+      <h2>Reports</h2>
+      <div class="card">Report placeholders (Top routes, distance, container fill).</div>
+    </section>
+  </main>
+
+  <footer class="footer">© SB Express · 2025</footer>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/utils.js"></script>
+  <script src="assets/js/admin.js"></script>
+</body>
+</html>

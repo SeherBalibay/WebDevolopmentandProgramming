@@ -1,0 +1,36 @@
+:root{
+  --bg:#0b1220; --fg:#e8eef7; --muted:#9fb1c7; --primary:#3ba3ff; --card:#121b2f;
+  --ok:#2ecc71; --warn:#f39c12; --bad:#e74c3c;
+}
+*{box-sizing:border-box} html,body{margin:0;padding:0;font-family:Inter,system-ui,Arial}
+body{background:var(--bg);color:var(--fg)}
+a{color:var(--primary);text-decoration:none}
+.btn{background:var(--primary);color:#fff;border:0;padding:10px 16px;border-radius:12px;cursor:pointer}
+.btn:active{transform:translateY(1px)}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;background:#0a1326;position:sticky;top:0;z-index:10}
+.brand{font-weight:800;letter-spacing:.3px}
+nav a{margin-left:14px;opacity:.9}
+.hero{position:relative;min-height:48vh;background:url('assets/img/sea-bg.jpg') center/cover no-repeat}
+.hero__overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,18,32,.3),rgba(11,18,32,.85))}
+.hero__content{position:relative;z-index:1;padding:7vw 6vw;max-width:900px}
+.hero h1{font-size:42px;margin:0 0 8px}
+.section{padding:36px 6vw}
+.card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:16px}
+.muted{color:var(--muted)}
+.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.form-grid .full{grid-column:1/-1}
+.form-grid label{display:block;margin:4px 0 6px;color:var(--muted)}
+.form-grid input, .form-grid select{width:100%;padding:10px;border-radius:10px;border:1px solid #24314d;background:#0e172b;color:var(--fg)}
+.form-inline{display:flex;gap:8px;align-items:center}
+.table{overflow:auto}
+.footer{padding:24px 6vw;color:var(--muted);border-top:1px solid rgba(255,255,255,.06);margin-top:24px}
+
+/* simple grid helpers */
+.grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+
+/* tabs (admin) */
+.tabs{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap}
+.tab{background:#13203a;color:#cfe1ff;border:1px solid #24314d;border-radius:12px;padding:8px 12px;cursor:pointer}
+.tab.active{background:var(--primary);color:white;border-color:transparent}
+.tab-panel{display:none}
+.tab-panel.active{display:block}
